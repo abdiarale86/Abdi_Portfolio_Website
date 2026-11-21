@@ -41,7 +41,19 @@ main>div,main>section{padding-block:42px}.section-title,.study h2{font-size:clam
   <li>Infrastructure as Code<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7-5 5 5 5m10-10 5 5-5 5"/><path class="draw" pathLength="1" d="m14 5-4 14"/></svg></li>
   <li>Cloud Security<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 3v6q0 7-8 11-8-4-8-11V5Z"/><path class="draw" pathLength="1" d="m8 12 3 3 5-6"/></svg></li>
 </ul><div class="actions"><a href="#projects">Explore projects →</a><a href="https://github.com/abdiarale86">GitHub profile ↗</a></div></div>
-<section class="console" aria-label="Interactive deployment walkthrough"><div class="console-top"><b>● portfolio-deploy</b><small>WALKTHROUGH</small></div><div class="inside"><div class="steps"><button type="button" aria-pressed="true" data-detail="A push to main started the deployment."><i>✓</i>Commit</button><button type="button" aria-pressed="false" data-detail="Amplify built the Next.js application."><i>✓</i>Build</button><button type="button" aria-pressed="false" data-detail="The compute platform served the application."><i>✓</i>Deploy</button><button type="button" aria-pressed="false" data-detail="DNS connected the custom domain to Amplify."><i>✓</i>Route</button></div><div class="tiles"><div><small>Source</small><strong>GitHub</strong><span class="bars" aria-hidden="true"></span></div><div><small>Build</small><strong>Next.js</strong><span class="bars" aria-hidden="true"></span></div><div><small>Host</small><strong>Amplify</strong><span class="bars" aria-hidden="true"></span></div></div><div class="logs"><b>$ release history / main</b><p>[GitHub] A push to main started the deployment.</p><p>[Next.js] Amplify built the Next.js application.</p><p>[Amplify] The compute platform served the application.</p><p>[Route 53] DNS connected the custom domain to Amplify.</p></div></div><div class="console-foot"><span aria-live="polite" id="detail">Commit · A push to main started the deployment.</span></div><div class="console-foot"><a href="https://github.com/abdiarale86/AWS-Portfolio-Website/blob/main/DOCUMENTATION.md">Read the deployment notes ↗</a></div></section></div></header><main><div class="projects-dashboard" id="projects">
+<section class="console" aria-labelledby="nexacore-title">
+  <div class="console-top"><b>Featured project</b><small>AWS IAM</small></div>
+  <div class="inside">
+    <h2 id="nexacore-title">Nexacore IAM Security Project</h2>
+    <p>In this Terraform lab, I replaced shared root access with individual identities and least-privilege permissions for four teams.</p>
+    <div class="logs"><b>Access controls</b>
+      <p>Identity · Individual IAM users</p>
+      <p>Authentication · MFA for every team</p>
+      <p>Audit · Multi-region CloudTrail logging</p>
+    </div>
+  </div>
+  <div class="console-foot"><a href="https://github.com/abdiarale86/Nexacore-IAM-Security-Project">View project on GitHub ↗</a></div>
+</section></div></header><main><div class="projects-dashboard" id="projects">
         <h2 class="section-title">Featured <em>projects</em></h2>
         <div class="projects-grid-advanced">
           
@@ -338,13 +350,6 @@ if ('IntersectionObserver' in window) {
     }
   });
   observer.observe(specialties);
-}
-const stageButtons = document.querySelectorAll('.steps button');
-for (const button of stageButtons) {
-  button.addEventListener('click', () => {
-    for (const stage of stageButtons) stage.setAttribute('aria-pressed', String(stage === button));
-    document.getElementById('detail').textContent = button.textContent.slice(1) + ' · ' + button.dataset.detail;
-  });
 }
 </script></body></html>
 
