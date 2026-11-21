@@ -1,0 +1,1009 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Abdi Arale | Portfolio preview</title><style>a{color:inherit;text-decoration:inherit}h1,h2,h3,h4{font-size:inherit;font-weight:inherit}
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          background: #0f0f1e;
+          color: #e0e0e0;
+          line-height: 1.6;
+        }
+
+        nav {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: rgba(15, 15, 30, 0.95);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+          padding: 20px 0;
+          z-index: 1000;
+        }
+
+        .nav-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo-area {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .logo {
+          width: 45px;
+          height: 45px;
+          background: linear-gradient(135deg, #6366f1, #a855f7);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 900;
+          font-size: 1.2em;
+          color: white;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 40px;
+        }
+
+        .nav-links a {
+          color: #a0a0a0;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s;
+          font-size: 0.95em;
+        }
+
+        .nav-links a:hover {
+          color: #6366f1;
+        }
+
+        .hero-dashboard {
+          margin-top: 85px;
+          padding: 80px 40px;
+          max-width: 1400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .hero-grid {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 30px;
+          margin-bottom: 30px;
+        }
+
+        .hero-main {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 60px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero-main::before {
+          content: "";
+          position: absolute;
+          top: -50%;
+          right: -50%;
+          width: 600px;
+          height: 600px;
+          background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+          animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .hero-main h1 {
+          font-size: 4.5em;
+          font-weight: 900;
+          margin-bottom: 20px;
+          background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: relative;
+          z-index: 2;
+        }
+
+        .hero-main .tagline {
+          font-size: 1.5em;
+          color: #a0a0a0;
+          margin-bottom: 30px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .hero-stats {
+          display: flex;
+          gap: 40px;
+          flex-wrap: wrap;
+          position: relative;
+          z-index: 2;
+        }
+
+        .stat-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .stat-icon {
+          width: 50px;
+          height: 50px;
+          background: rgba(99, 102, 241, 0.2);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5em;
+        }
+
+        .stat-info h3 {
+          font-size: 1.8em;
+          color: #6366f1;
+        }
+
+        .stat-info p {
+          font-size: 0.85em;
+          color: #888;
+        }
+
+        .hero-side {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .info-card {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 30px;
+        }
+
+        .info-card h3 {
+          font-size: 1.2em;
+          margin-bottom: 20px;
+          color: #fff;
+        }
+
+        .info-list {
+          list-style: none;
+        }
+
+        .info-list li {
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.95em;
+        }
+
+        .info-list li:last-child {
+          border-bottom: none;
+        }
+
+        .info-label {
+          color: #888;
+        }
+
+        .info-value {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .timeline-section {
+          max-width: 1400px;
+          margin: 60px auto;
+          padding: 0 40px;
+        }
+
+        .section-title {
+          font-size: 2.5em;
+          font-weight: 800;
+          margin-bottom: 50px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .section-title::before {
+          content: "";
+          width: 60px;
+          height: 4px;
+          background: linear-gradient(90deg, #6366f1, transparent);
+        }
+
+        .timeline {
+          position: relative;
+          padding-left: 40px;
+          border-left: 2px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .timeline-item {
+          position: relative;
+          margin-bottom: 50px;
+          padding-left: 40px;
+        }
+
+        .timeline-item::before {
+          content: "";
+          position: absolute;
+          left: -46px;
+          top: 0;
+          width: 14px;
+          height: 14px;
+          background: #6366f1;
+          border: 3px solid #0f0f1e;
+          border-radius: 50%;
+        }
+
+        .timeline-date {
+          color: #6366f1;
+          font-weight: 600;
+          font-size: 0.9em;
+          margin-bottom: 10px;
+        }
+
+        .timeline-card {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 15px;
+          padding: 30px;
+          transition: all 0.3s;
+        }
+
+        .timeline-card:hover {
+          background: rgba(255, 255, 255, 0.08);
+          transform: translateX(10px);
+        }
+
+        .timeline-card h3 {
+          font-size: 1.5em;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+
+        .timeline-card .role {
+          color: #888;
+          margin-bottom: 15px;
+          font-size: 0.95em;
+        }
+
+        .timeline-card ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .timeline-card li {
+          color: #b0b0b0;
+          line-height: 1.7;
+          padding-left: 18px;
+          position: relative;
+        }
+
+        .timeline-card li::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #6366f1;
+        }
+
+        .projects-dashboard {
+          max-width: 1400px;
+          margin: 60px auto;
+          padding: 0 40px;
+        }
+
+        .projects-grid-advanced {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 30px;
+        }
+
+        .project-card-advanced {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          overflow: hidden;
+          transition: all 0.4s;
+        }
+
+        .project-card-advanced:hover {
+          transform: translateY(-10px);
+          border-color: rgba(99, 102, 241, 0.5);
+          box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .project-header {
+          background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+          padding: 40px 30px;
+          position: relative;
+        }
+
+        .project-number {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 3em;
+          font-weight: 900;
+          color: rgba(255, 255, 255, 0.1);
+        }
+
+        .project-header h3 {
+          font-size: 1.8em;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+
+        .project-status {
+          display: inline-block;
+          background: rgba(34, 197, 94, 0.2);
+          color: #22c55e;
+          padding: 6px 14px;
+          border-radius: 15px;
+          font-size: 0.8em;
+          border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .project-body {
+          padding: 30px;
+        }
+
+        .project-body p {
+          color: #b0b0b0;
+          margin-bottom: 25px;
+          line-height: 1.7;
+        }
+
+        .tech-stack-advanced {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 25px;
+        }
+
+        .tech-badge-advanced {
+          background: rgba(99, 102, 241, 0.15);
+          color: #a5b4fc;
+          padding: 6px 14px;
+          border-radius: 15px;
+          font-size: 0.8em;
+          border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .project-footer {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          justify-content: flex-start;
+          align-items: center;
+          padding-top: 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-link-btn {
+          background: #6366f1;
+          color: white;
+          padding: 12px 25px;
+          border-radius: 10px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: all 0.3s;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .project-link-btn:hover {
+          background: #7c3aed;
+          transform: translateX(5px);
+        }
+
+        .project-link-btn.secondary {
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        .project-link-btn.secondary:hover {
+          background: rgba(255, 255, 255, 0.15);
+        }
+
+        .skills-matrix {
+          max-width: 1400px;
+          margin: 60px auto;
+          padding: 0 40px;
+        }
+
+        .skills-categories {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+        }
+
+        @media (max-width: 1024px) {
+          .skills-categories {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 640px) {
+          .skills-categories {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .skill-category {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 35px;
+        }
+
+        .category-header {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 25px;
+        }
+
+        .category-icon {
+          width: 50px;
+          height: 50px;
+          background: rgba(99, 102, 241, 0.2);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5em;
+        }
+
+        .category-header h3 {
+          font-size: 1.4em;
+          color: #fff;
+        }
+
+        .skill-list-advanced {
+          list-style: none;
+        }
+
+        .skill-list-advanced li {
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          color: #e0e0e0;
+          font-weight: 500;
+        }
+
+        .skill-list-advanced li:last-child {
+          border-bottom: none;
+        }
+
+        .contact-dashboard {
+          max-width: 1400px;
+          margin: 60px auto;
+          padding: 0 40px;
+        }
+
+        .contact-main {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 20px;
+          padding: 50px;
+        }
+
+        .contact-main h3 {
+          font-size: 2em;
+          color: #fff;
+          margin-bottom: 20px;
+        }
+
+        .contact-main p {
+          color: #a0a0a0;
+          margin-bottom: 40px;
+          font-size: 1.1em;
+          line-height: 1.7;
+        }
+
+        .contact-methods {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .contact-method {
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 15px;
+          padding: 25px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          text-decoration: none;
+          transition: all 0.3s;
+        }
+
+        .contact-method:hover {
+          background: rgba(99, 102, 241, 0.1);
+          border-color: #6366f1;
+          transform: translateX(10px);
+        }
+
+        .contact-method-icon {
+          width: 60px;
+          height: 60px;
+          background: rgba(99, 102, 241, 0.2);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.8em;
+        }
+
+        .contact-method-info h4 {
+          color: #fff;
+          font-size: 1.2em;
+          margin-bottom: 5px;
+        }
+
+        .contact-method-info p {
+          color: #888;
+          margin: 0;
+          font-size: 0.9em;
+        }
+
+        footer {
+          max-width: 1400px;
+          margin: 80px auto 0;
+          padding: 40px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          text-align: center;
+          color: #666;
+        }
+
+        .hero-action { position: relative; z-index: 2; }
+        .hero-grid { grid-template-columns: 1.15fr 1fr; }
+        .delivery { background: #0a121d; border: 1px solid #32475a; border-radius: 20px; padding: clamp(20px, 3vw, 38px); }
+        .terminal-label, .delivery code { font-family: var(--font-geist-mono), monospace; color: #82e1c3; }
+        .terminal-label { font-size: .8rem; }
+        .delivery h2 { margin: 12px 0 20px; font-size: 1.65rem; font-weight: 700; }
+        .delivery ol { list-style: none; border-left: 2px solid #34544e; padding-left: 18px; }
+        .delivery li + li { margin-top: 12px; }
+        .delivery li span { display: block; color: #bdc8cf; }
+        .delivery a { display: inline-block; margin-top: 20px; color: #a9d9ff; text-decoration: underline; }
+        [id] { scroll-margin-top: 100px; }
+        .projects-grid-advanced { grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); }
+        @media (max-width: 640px) {
+          nav { position: static; }
+          .nav-container { flex-wrap: wrap; gap: 12px; padding: 0 18px; }
+          .nav-links { gap: 16px; flex-wrap: wrap; }
+          .hero-dashboard { margin-top: 0; padding: 28px 18px 0; }
+          .hero-main, .contact-main { padding: 24px; }
+          .projects-dashboard, .timeline-section, .skills-matrix, .contact-dashboard { padding: 0 18px; }
+          .contact-methods { grid-template-columns: 1fr; }
+          .contact-method { flex-wrap: wrap; overflow-wrap: anywhere; }
+          .timeline, .timeline-item { padding-left: 14px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-main::before { animation: none; }
+        }
+        @media (max-width: 1024px) {
+          .hero-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .hero-main h1 {
+            font-size: 3em;
+          }
+        }
+      
+        body { background: #0a1016; color: #eef6fa; font-family: Arial, Arial, sans-serif; }
+        nav { background: #0b1219; border-color: #26333b; }
+        .logo { background: #83f4bb; color: #102019; border-radius: 5px; font-family: monospace; }
+        .nav-links a:hover, .timeline-date { color: #83f4bb; }
+        .hero-dashboard { background-image: linear-gradient(#17242a 1px, transparent 1px), linear-gradient(90deg,#17242a 1px, transparent 1px); background-size: 38px 38px; padding-block: clamp(40px,7vw,90px); }
+        .hero-grid { grid-template-columns: 1fr 1fr; gap: clamp(24px,5vw,72px); align-items: center; margin: 0; }
+        .hero-main { background: #0a1016eb; border: 0; border-radius: 0; padding: 18px 0; }
+        .hero-main::before { display: none; }
+        .hero-main h1 { font-size: clamp(3.1rem,6.5vw,6.5rem); line-height: .98; letter-spacing: -.065em; background: none; color: #f4f8ff; -webkit-text-fill-color: currentColor; }
+        .hero-main h1 span { display: block; color: #83f4bb; }
+        .hero-main .tagline { font-size: 1.1rem; color: #b4c4ce; max-width: 47ch; }
+        .byline, .terminal-label, .project-header small { color: #92e1c2; font: 600 .82rem/1.6 ui-monospace, monospace; }
+        .byline { margin-bottom: 14px; }
+        .project-link-btn { background: #8af3bc; color: #091710; border-radius: 5px; }
+        .project-link-btn:hover { background: #b3ffd6; }
+        .delivery { background: #0b141c; border: 1px solid #394c56; border-radius: 12px; padding: 0; overflow: hidden; box-shadow: 0 20px 50px #0005; }
+        .terminal-label { background: #15212b; padding: 12px 18px; border-bottom: 1px solid #34434c; }
+        .delivery h2, .pipeline, .console-output, .delivery .case-link { margin: 20px; }
+        .delivery h2 { font-size: 1.3rem; }
+        .pipeline { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+        .pipeline b { padding: 5px 10px; border: 1px solid #38644f; color: #a6fbc8; border-radius: 4px; font: 600 .82rem monospace; }
+        .console-output { border-top: 1px solid #293640; padding-top: 14px; color: #b5c4d1; font: .88rem/1.9 ui-monospace, monospace; }
+        .console-output code { color: #85edb4; }
+        .delivery .case-link { display: block; color: #9edaff; }
+        .project-card-advanced, .timeline-card, .skill-category, .contact-main { border-radius: 9px; background: #101a22; border-color: #2b3942; }
+        .project-header { background: #15212a; padding: 22px 30px; border-bottom: 1px solid #2b3942; }
+        .project-header h3 { margin: 6px 0 0; }
+        .section-title::before { background: #83f4bb; width: 28px; }
+        .tech-badge-advanced { color: #a4dec6; border-color: #344e46; background: #13261f; border-radius: 4px; font-family: monospace; }
+        @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+ .toolbelt {background:#122021;color:#a4ebc7;padding:18px;text-align:center;word-spacing:.18em;font:600 1rem/2 monospace;border-block:1px solid #314a40}.toolbelt i{padding:0 1vw;color:#5e9580}.study{max-width:1320px;margin:4rem auto;padding:clamp(24px,5vw,72px);background:#12212b;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;border-radius:12px}.study h2{font-size:clamp(2rem,4vw,4rem);font-weight:800;letter-spacing:-.05em}.study small,.trace code{color:#8af3bc}.study p{margin:12px 0 20px}.trace{background:#091319;border:1px solid #314541;border-radius:8px;padding:24px;font-family:monospace}.trace p{margin:5px 0;color:#bdd2d7}summary{cursor:pointer;color:#a7c9d7}.project-card-advanced:hover{border-color:#83f4bb;box-shadow:none}@media(max-width:700px){.study{grid-template-columns:1fr;margin:24px 18px}.contact-methods{grid-template-columns:minmax(0,1fr)}} </style><body>
+
+      <nav>
+        <div class="nav-container">
+          <div class="logo-area">
+            <div class="logo">AA</div>
+            <span style="color:white;font-weight:600">Abdi Arale</span>
+          </div>
+          <div class="nav-links">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero-dashboard">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <p class="byline">Abdi Jama Arale / DevOps Engineer</p>
+            <h1>Cloud infrastructure.<span>Built as code.</span></h1>
+            <p class="tagline">I build AWS environments with Terraform and automate how applications move from a Git commit to production.</p>
+            <a class="project-link-btn" href="#projects">Explore my projects ↓</a>
+          </div>
+          <aside class="delivery" aria-labelledby="delivery-title">
+            <p class="terminal-label">~/aws-portfolio / main</p>
+            <h2 id="delivery-title">Original AWS deployment</h2>
+            <div class="pipeline" aria-label="Pipeline stages"><b>Commit</b> → <b>Build</b> → <b>Deploy</b></div>
+            <div class="console-output"><details open><summary>Release trace</summary>
+              <p><code>$ git push origin main</code></p>
+              <p>↳ GitHub triggered an Amplify build</p>
+              <p>↳ Amplify packaged the Next.js app</p>
+              <p>↳ Route 53 routed abdiarale.com to Amplify</p>
+            </details></div>
+            <a class="case-link" href="https://github.com/abdiarale86/AWS-Portfolio-Website/blob/main/DOCUMENTATION.md">Read the deployment and 404 investigation ↗</a>
+          </aside>
+        </div>
+      </div>
+
+      <div class="toolbelt" aria-label="Project technologies">Terraform <i>◆</i> AWS IAM <i>◆</i> CloudTrail <i>◆</i> Next.js <i>◆</i> AWS CDK <i>◆</i> Amplify</div><div class="projects-dashboard" id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid-advanced">
+          
+            <div class="project-card-advanced">
+              <div class="project-header">
+                <small>Terraform / AWS IAM / CloudTrail</small><h3>Nexacore IAM Security Project</h3>
+              </div>
+              <div class="project-body">
+                <p>Replaced shared AWS root access with role-based permissions and CloudTrail auditing.</p>
+                <div class="tech-stack-advanced">
+                  
+                    <span class="tech-badge-advanced">
+                      Terraform
+                    </span>
+                  
+                    <span class="tech-badge-advanced">
+                      AWS IAM
+                    </span>
+                  
+                    <span class="tech-badge-advanced">
+                      CloudTrail
+                    </span>
+                  
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/abdiarale86/Nexacore-IAM-Security-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link-btn"
+                  >
+                    View on GitHub →
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="project-card-advanced">
+              <div class="project-header">
+                <small>Terraform / AWS / Shell</small><h3>ServiceHub AWS Terraform</h3>
+              </div>
+              <div class="project-body">
+                <p>Built reusable Terraform modules so ServiceHub could deploy isolated AWS environments across availability zones.</p>
+                <div class="tech-stack-advanced">
+                  
+                    <span class="tech-badge-advanced">
+                      Terraform
+                    </span>
+                  
+                    <span class="tech-badge-advanced">
+                      AWS
+                    </span>
+                  
+                    <span class="tech-badge-advanced">
+                      Shell
+                    </span>
+                  
+                </div>
+                <div class="project-footer">
+                  <a
+                    href="https://github.com/abdiarale86/Servicehub_AWS_terraform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link-btn"
+                  >
+                    View on GitHub →
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <section class="study"><div><small>DEPLOYMENT CASE STUDY</small><h2>One domain. One 404.</h2><p>The custom domain resolved, but the app returned a 404. Response headers pointed to static hosting. Switching Amplify to its server-rendered platform fixed the deployment.</p><a class="project-link-btn" href="https://github.com/abdiarale86/AWS-Portfolio-Website/blob/main/DOCUMENTATION.md">Read the investigation ↗</a></div><div class="trace"><code>HTTP 404</code><p>↓ Inspect response headers</p><code>Server: AmazonS3</code><p>↓ Correct Amplify platform</p><code>WEB_COMPUTE</code></div></section><div class="timeline-section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          
+            <div class="timeline-item"-$Aug 2025 – Jun 2026`}>
+              <div class="timeline-date">Aug 2025 – Jun 2026</div>
+              <div class="timeline-card">
+                <h3>AWS Cloud Engineer</h3>
+                <div class="role">Octelligence Inc. · Ottawa, ON</div>
+                <ul>
+                  
+                    <li>Provisioned and maintained AWS cloud infrastructure for a SaaS platform serving private companies and law firms using Terraform modules and Kubernetes on EKS to keep the platform available and audit-ready for clients.</li>
+                  
+                    <li>Built GitHub Actions and ArgoCD CI/CD pipelines to automatically build, test, and deploy application updates to AWS, reducing deployment time by eliminating manual steps and giving the team faster release cycles.</li>
+                  
+                    <li>Managed containerized workloads using Docker and Kubernetes on Amazon EKS by writing Helm charts to deploy and scale microservices, improving uptime and making it easier to recover from failures.</li>
+                  
+                    <li>Wrote Terraform modules to automate the provisioning of AWS environments so that new infrastructure could be created consistently and quickly, reducing the time engineers spent on manual cloud setup tasks.</li>
+                  
+                    <li>Reduced AWS cloud costs by reviewing EC2 instance sizes, setting up auto-scaling, and removing unused resources so the company only paid for what it actually needed.</li>
+                  
+                    <li>Secured cloud environments by setting up IAM roles, VPC security groups, and HashiCorp Vault for secrets management to make sure only the right people and services had access to sensitive infrastructure.</li>
+                  
+                </ul>
+              </div>
+            </div>
+          
+            <div class="timeline-item"-$Jul 2023 – Mar 2025`}>
+              <div class="timeline-date">Jul 2023 – Mar 2025</div>
+              <div class="timeline-card">
+                <h3>DevOps Engineer</h3>
+                <div class="role">Canada Border Services Agency (CBSA) · Toronto, ON</div>
+                <ul>
+                  
+                    <li>Designed and built AWS cloud infrastructure including multi-account Landing Zones for Canada's Border Services Agency by using Terraform to provision environments across dev, staging, production, and disaster recovery.</li>
+                  
+                    <li>Wrote Terraform modules from scratch to provision scalable AWS environments across multiple availability zones, which reduced the time the team spent on infrastructure maintenance by 80%.</li>
+                  
+                    <li>Built GitHub Actions CI/CD pipelines to automate application builds, testing, and deployments from development to production, cutting manual deployment work by 70%.</li>
+                  
+                    <li>Managed containerized workloads on Amazon EKS by writing Helm charts and Kubernetes manifests to deploy and scale microservices, keeping government production systems available.</li>
+                  
+                    <li>Monitored infrastructure performance using Prometheus and Grafana by setting up dashboards and alert rules so the team could detect and fix problems before they affected users.</li>
+                  
+                    <li>Lowered AWS cloud costs by rightsizing EC2 instances, adding auto-scaling policies, and cleaning up unused resources to cut the monthly infrastructure bill.</li>
+                  
+                </ul>
+              </div>
+            </div>
+          
+            <div class="timeline-item"-$Sep 2023 – Feb 2024`}>
+              <div class="timeline-date">Sep 2023 – Feb 2024</div>
+              <div class="timeline-card">
+                <h3>AWS Cloud Engineer</h3>
+                <div class="role">Softchoice · Toronto, ON</div>
+                <ul>
+                  
+                    <li>Worked with AWS specialists and sales teams to design cloud migration solutions for clients by turning their technical requirements into scalable AWS architectures that matched their business goals.</li>
+                  
+                    <li>Automated AWS infrastructure for client environments by writing Terraform modules and Bash scripts to provision and configure cloud resources, reducing manual setup time and speeding up deployments.</li>
+                  
+                    <li>Integrated Trivy, SonarQube, and HashiCorp Vault into GitHub Actions pipelines to automatically scan containers, analyze code, and manage secrets before anything reached production.</li>
+                  
+                    <li>Delivered 40+ hours of training and written documentation to client teams so they could manage their own production deployments independently after handoff, reducing the need for ongoing support.</li>
+                  
+                </ul>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="skills-matrix" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-categories">
+          
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">☁️</div>
+                <h3>Cloud &amp; AWS</h3>
+              </div>
+              <ul class="skill-list-advanced">
+                
+                  <li>Amazon VPC</li>
+                
+                  <li>AWS IAM</li>
+                
+                  <li>Amazon EC2</li>
+                
+                  <li>Amazon S3</li>
+                
+                  <li>Amazon RDS</li>
+                
+                  <li>Amazon DynamoDB</li>
+                
+              </ul>
+            </div>
+          
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">⚙️</div>
+                <h3>Infrastructure as Code</h3>
+              </div>
+              <ul class="skill-list-advanced">
+                
+                  <li>Terraform</li>
+                
+                  <li>AWS CDK</li>
+                
+                  <li>Docker</li>
+                
+                  <li>Kubernetes</li>
+                
+                  <li>Amazon EKS</li>
+                
+                  <li>Helm</li>
+                
+              </ul>
+            </div>
+          
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">🔄</div>
+                <h3>CI/CD &amp; Automation</h3>
+              </div>
+              <ul class="skill-list-advanced">
+                
+                  <li>Git &amp; GitHub</li>
+                
+                  <li>GitHub Actions</li>
+                
+                  <li>ArgoCD</li>
+                
+                  <li>Jenkins</li>
+                
+                  <li>Python &amp; Bash Scripting</li>
+                
+              </ul>
+            </div>
+          
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">🔐</div>
+                <h3>Security &amp; Best Practices</h3>
+              </div>
+              <ul class="skill-list-advanced">
+                
+                  <li>DevSecOps</li>
+                
+                  <li>IAM Roles &amp; Policies</li>
+                
+                  <li>HashiCorp Vault</li>
+                
+                  <li>Secrets Management</li>
+                
+                  <li>SonarQube &amp; Trivy</li>
+                
+                  <li>Principle of Least Privilege</li>
+                
+              </ul>
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="skills-matrix">
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <div class="skill-category">
+          <ul class="skill-list-advanced">
+            
+              <li>B.Sc. in Computer Science, Algoma University, ON</li>
+            
+              <li>B.A. in English and Literature, York University, ON</li>
+            
+              <li>AWS Solutions Architect – Associate (SAA-C03), Amazon Web Services</li>
+            
+              <li>Terraform Associate, HashiCorp</li>
+            
+              <li>CCNA, Cisco</li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-dashboard" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-main">
+          <h3>Let&apos;s Connect</h3>
+          <p>
+            Open to AWS cloud engineering and DevOps opportunities. If you&apos;re looking for someone
+            experienced with Terraform, Kubernetes, and CI/CD automation, I&apos;d love to hear from you.
+          </p>
+          <div class="contact-methods">
+            
+              <a
+               
+                href="mailto:abdijarale@gmail.com"
+               
+               
+                class="contact-method"
+              >
+                <div class="contact-method-icon">✉️</div>
+                <div class="contact-method-info">
+                  <h4>Email</h4>
+                  <p>abdijarale@gmail.com</p>
+                </div>
+              </a>
+            
+              <a
+               
+                href="https://linkedin.com/in/abdijarale"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-method"
+              >
+                <div class="contact-method-icon">💼</div>
+                <div class="contact-method-info">
+                  <h4>LinkedIn</h4>
+                  <p>linkedin.com/in/abdijarale</p>
+                </div>
+              </a>
+            
+              <a
+               
+                href="https://github.com/abdiarale86"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-method"
+              >
+                <div class="contact-method-icon">💻</div>
+                <div class="contact-method-info">
+                  <h4>GitHub</h4>
+                  <p>github.com/abdiarale86</p>
+                </div>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Built with Next.js | © 2026 Abdi Arale</p>
+      </footer></body></html>
+
