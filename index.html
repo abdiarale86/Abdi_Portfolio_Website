@@ -15,8 +15,32 @@ main>div,main>section{padding-block:42px}.section-title,.study h2{font-size:clam
 .contact-row strong, .contact-row small { display: block; }
 .contact-row strong { font-size: 18px; }
 .contact-row small { margin-top: 5px; color: var(--muted); overflow-wrap: anywhere; }
+
+.specialties { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:20px 0; }
+.specialties li { display:inline-flex; align-items:center; gap:9px; padding:6px 12px; border:1px solid #516427; border-radius:100px; background:#202714; color:#dcf3aa; font-size:14px; font-weight:600; }
+.specialties svg { width:18px; height:18px; fill:none; stroke:var(--lime); stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+.specialties .node { fill:#202714; }
+@media (prefers-reduced-motion:no-preference) {
+  .playing .rise { animation:badge-rise .7s ease-out; }
+  .playing .draw { stroke-dasharray:1; animation:badge-draw .8s ease-out; }
+  .playing .node { animation:badge-light .45s var(--delay); }
+  .playing .spin { transform-origin:center; animation:badge-turn .8s ease-out; }
+}
+@keyframes badge-rise { from { transform:translateY(4px); opacity:.2; } }
+@keyframes badge-draw { from { stroke-dashoffset:1; } to { stroke-dashoffset:0; } }
+@keyframes badge-light { 50% { fill:var(--lime); } }
+@keyframes badge-turn { from { transform:rotate(-90deg); } }
 </style></head><body><nav><div class="navinner"><a class="brand" href="#"><b>›_</b> <span>Abdi Arale</span></a><a href="#projects">Projects</a><a class="optional" href="#experience">Experience</a><a href="#skills">Skills</a><a class="contactpill" href="#contact">Contact</a></div></nav>
-<header><div class="wrap"><div><span class="identity"><b>●</b> Abdi Jama Arale · Cloud &amp; DevOps</span><h1>I build <em>AWS infrastructure</em> with Terraform.</h1><p class="intro">Explore the code behind my cloud environments, access controls and deployment pipelines.</p><div class="actions"><a href="#projects">Explore projects →</a><a href="https://github.com/abdiarale86">GitHub profile ↗</a></div><div class="facts"><div><strong>Terraform</strong><small>Provisioning</small></div><div><strong>AWS IAM</strong><small>Access control</small></div><div><strong>CI/CD</strong><small>Delivery</small></div></div></div>
+<header><div class="wrap"><div><h1>Hi, I’m <em>Abdi Arale.</em></h1>
+<p class="intro">I design cloud platforms, automate deployments, and keep systems reliable in production.</p>
+<ul class="specialties" aria-label="Specialties">
+  <li>Cloud Engineering<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16a4 4 0 0 1-.5-8 6 6 0 0 1 11.2-1 4.5 4.5 0 0 1 1 9"/><path class="rise" d="M12 20V10m-3 3 3-3 3 3"/></svg></li>
+  <li>DevOps<svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" pathLength="1" d="M12 12C8 5 2 6 2 12s6 7 10 0 10-6 10 0-6 7-10 0Z"/></svg></li>
+  <li>CI/CD<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16"/><circle class="node" style="--delay:0ms" cx="4" cy="12" r="2.5"/><circle class="node" style="--delay:180ms" cx="12" cy="12" r="2.5"/><circle class="node" style="--delay:360ms" cx="20" cy="12" r="2.5"/></svg></li>
+  <li>Kubernetes<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4 2 8-6 7H8l-6-7 2-8Z"/><g class="spin"><circle cx="12" cy="12" r="2"/><path d="M12 6v4m0 4v4m-5-9 3.5 2m3 2L17 15m0-6-3.5 2m-3 2L7 15"/></g></svg></li>
+  <li>Infrastructure as Code<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7-5 5 5 5m10-10 5 5-5 5"/><path class="draw" pathLength="1" d="m14 5-4 14"/></svg></li>
+  <li>Cloud Security<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 3v6q0 7-8 11-8-4-8-11V5Z"/><path class="draw" pathLength="1" d="m8 12 3 3 5-6"/></svg></li>
+</ul><div class="actions"><a href="#projects">Explore projects →</a><a href="https://github.com/abdiarale86">GitHub profile ↗</a></div></div>
 <section class="console" aria-label="Interactive deployment walkthrough"><div class="console-top"><b>● portfolio-deploy</b><small>WALKTHROUGH</small></div><div class="inside"><div class="steps"><button type="button" aria-pressed="true" data-detail="A push to main started the deployment."><i>✓</i>Commit</button><button type="button" aria-pressed="false" data-detail="Amplify built the Next.js application."><i>✓</i>Build</button><button type="button" aria-pressed="false" data-detail="The compute platform served the application."><i>✓</i>Deploy</button><button type="button" aria-pressed="false" data-detail="DNS connected the custom domain to Amplify."><i>✓</i>Route</button></div><div class="tiles"><div><small>Source</small><strong>GitHub</strong><span class="bars" aria-hidden="true"></span></div><div><small>Build</small><strong>Next.js</strong><span class="bars" aria-hidden="true"></span></div><div><small>Host</small><strong>Amplify</strong><span class="bars" aria-hidden="true"></span></div></div><div class="logs"><b>$ release history / main</b><p>[GitHub] A push to main started the deployment.</p><p>[Next.js] Amplify built the Next.js application.</p><p>[Amplify] The compute platform served the application.</p><p>[Route 53] DNS connected the custom domain to Amplify.</p></div></div><div class="console-foot"><span aria-live="polite" id="detail">Commit · A push to main started the deployment.</span></div><div class="console-foot"><a href="https://github.com/abdiarale86/AWS-Portfolio-Website/blob/main/DOCUMENTATION.md">Read the deployment notes ↗</a></div></section></div></header><main><div class="projects-dashboard" id="projects">
         <h2 class="section-title">Featured <em>projects</em></h2>
         <div class="projects-grid-advanced">
@@ -297,6 +321,24 @@ main>div,main>section{padding-block:42px}.section-title,.study h2{font-size:clam
 </main><footer>
         <p>Built with Next.js | © 2026 Abdi Arale</p>
       </footer><script>
+const specialties = document.querySelector('.specialties');
+function playBadge(badge) {
+  badge.classList.remove('playing');
+  void badge.offsetWidth;
+  badge.classList.add('playing');
+}
+for (const badge of specialties.children) {
+  badge.addEventListener('pointerenter', () => playBadge(badge));
+}
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      Array.from(specialties.children).forEach(playBadge);
+      observer.disconnect();
+    }
+  });
+  observer.observe(specialties);
+}
 const stageButtons = document.querySelectorAll('.steps button');
 for (const button of stageButtons) {
   button.addEventListener('click', () => {
